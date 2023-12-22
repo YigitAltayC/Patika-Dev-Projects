@@ -1,2 +1,3 @@
 # Patika-Dev-Projects
-Patika Dev'deki Ödevler için.
+
+Patika Dev'deki Ödevler için açmış olduğum Git Reposu.
