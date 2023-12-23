@@ -185,3 +185,47 @@ SELECT store_id, COUNT(*) FROM film
 GROUP BY store_id;
 ```
 
+# SQL Odev 8
+
+- test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+
+```SQL
+CREATE TABLE employee (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    birthday DATE,
+    email VARCHAR(100)
+);
+```
+
+- Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+
+```SQL
+UPDATE employee
+SET name = 'Yeni İsim'
+WHERE id = 1;
+
+UPDATE employee
+SET birthday = '1990-01-01'
+WHERE id = 2;
+
+UPDATE employee
+SET email = 'yeniemail@example.com'
+WHERE id = 3;
+
+UPDATE employee
+SET name = 'Yeni İsim',
+    birthday = '1995-05-05'
+WHERE id = 4;
+
+UPDATE employee
+SET name = 'Yeni İsim',
+    birthday = '1995-05-05',
+    email = 'yeniemail@example.com'
+WHERE id = 5;
+
+```
+
+
+
+
