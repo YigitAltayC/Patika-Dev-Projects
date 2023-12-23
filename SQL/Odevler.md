@@ -161,3 +161,27 @@ FROM film WHERE rental_rate = 0.99;
 SELECT COUNT(DISTINCT replacement_cost)
 FROM film WHERE length > 150;
 ```
+
+# SQL Odev 7
+
+- film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.
+
+```SQL
+SELECT rating, title FROM film;
+GROUP BY rating;
+```
+
+- film tablosunda bulunan filmleri replacement_cost sütununa göre grupladığımızda film sayısı 50 den fazla olan replacement_cost değerini ve karşılık gelen film sayısını sıralayınız.
+
+```SQL
+SELECT replacement_cost, COUNT(*) FROM film
+GROUP BY replacement_cost HAVING COUNT(*) > 50;
+```
+
+- customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir?
+
+```SQL
+SELECT store_id, COUNT(*) FROM film
+GROUP BY store_id;
+```
+
